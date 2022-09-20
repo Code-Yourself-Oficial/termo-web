@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header">
+    <a routerLink="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21.4 38.3">
+        <path id="back" d="M18.6,42.6,1.05,25.05a1.524,1.524,0,0,1-.35-.5,1.562,1.562,0,0,1,0-1.1,1.524,1.524,0,0,1,.35-.5L18.6,5.4a2.057,2.057,0,0,1,2.8,0,1.992,1.992,0,0,1,0,2.85L5.65,24,21.4,39.75a1.861,1.861,0,0,1,.575,1.425,2.006,2.006,0,0,1-2,1.975A1.866,1.866,0,0,1,18.6,42.6Z" transform="translate(-0.6 -4.85)" fill="#fff"/>
+      </svg>
+    </a>
+    <h1>PERFIL</h1>
+    <notifier-container></notifier-container>
+    <span></span>
+  </div>
+  <div class="content">
+    <div class="profile">
+      <h2>Dados Pessoais</h2>
+
+      <input class="input" type="text" [(ngModel)]="user.name" placeholder="Nome">
+      <input class="input" type="email" [(ngModel)]="user.email" placeholder="Email">
+      <input class="input" type="password" [(ngModel)]="user.password" placeholder="Password">
+      
+      <button appHover class="buttom" (click)="save()">Cadastrar</button>
+    </div>
+    <app-dashboard></app-dashboard>
+  </div>
+</div>

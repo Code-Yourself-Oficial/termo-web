@@ -1,0 +1,7 @@
+<div 
+  [@.disabled]="animationDisabled"
+  [@flip]="{value: flipped, params: {delay: index * 0.3, color: color}}"
+  class="letter"
+  (click)="onClick()"
+  [ngClass]="{'active': active, 'disabled': disabled, 'keyboard-key': isKeyboardKey, 'enter': isEnter}">{{value}}
+</div>

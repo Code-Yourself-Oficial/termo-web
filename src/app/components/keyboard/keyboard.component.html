@@ -1,0 +1,14 @@
+<div class="keyboard">
+  <div class="keyboard-row keyboard-row-first">
+    <app-letter *ngFor="let letter of rowOneLetters" [isKeyboardKey]="true" [value]="letter" (onClickEvent)="onKeyClick(letter)"></app-letter>
+  </div>
+  <div class="keyboard-row keyboard-row-second">
+    <app-letter *ngFor="let letter of rowTwoLetters" [isKeyboardKey]="true" [value]="letter" (onClickEvent)="onKeyClick(letter)"></app-letter>
+    <app-letter class="backspace" [value]="'&larr;'" [isKeyboardKey]="true" (onClickEvent)="onKeyClick('Backspace')"></app-letter>
+
+  </div>
+  <div class="keyboard-row keyboard-row-third">
+    <app-letter *ngFor="let letter of rowThreeLetters" [isKeyboardKey]="true" [value]="letter" (onClickEvent)="onKeyClick(letter)"></app-letter>
+    <app-letter class="enter" [value]="'Enter'" [isKeyboardKey]="true" [isEnter]="true" (onClickEvent)="onKeyClick('Enter')"></app-letter>
+  </div>
+</div>

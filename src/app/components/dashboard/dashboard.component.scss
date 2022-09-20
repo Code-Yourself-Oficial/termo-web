@@ -1,0 +1,50 @@
+.title {
+  color: #FFF;
+}
+
+.container {
+  width: 960px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+::ng-deep .tick {
+  text {
+    fill: #FFF !important;
+    font-size: 24px !important;
+  }
+}
+
+::ng-deep .ngx-charts {
+  text {
+    fill: #FFF !important;
+    font-weight: 600;
+  }
+  p {
+    color: #FFF !important;
+  }
+}
+
+.bottom-charts {
+  >* {
+    float: left;
+  }
+}
+
+.bar-chart, .pie-chart {
+  background-color: #132E3B;
+  padding: 16px;
+  border-radius: 4px;
+
+  h2 {
+    margin-top: 8px;
+    color: #FFF;
+    text-align: center;
+  }
+}
+
+.pie-chart {
+  margin-right: 12px;
+  margin-left: 12px;
+}

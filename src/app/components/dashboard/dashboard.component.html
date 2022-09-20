@@ -1,0 +1,36 @@
+<div class="container">
+  <h1 class="title">Dashboard</h1>
+  <ngx-charts-number-card
+    [view]="[840, 160]"
+    [scheme]="color"
+    [results]="cardsData"
+    [cardColor]="'#132E3B'"
+    [animations]="false"
+    [innerPadding]="12"
+  >
+  </ngx-charts-number-card>
+
+  <div class="bottom-charts">
+    <div class="bar-chart">
+      <h2>Média de tentativas</h2>
+      <ngx-charts-bar-horizontal class="svg"
+        [view]="[368, 200]"
+        [scheme]="colorBar"
+        [results]="barData"
+        [xAxis]="false"
+        [yAxis]="true"
+      >
+      </ngx-charts-bar-horizontal>
+    </div>
+
+    <div class="pie-chart">
+      <h2>Porcentagem de vitórias</h2>
+      <ngx-charts-pie-chart
+        [view]="[368, 200]"
+        [scheme]="colorPie"
+        [results]="pieData"
+      >
+      </ngx-charts-pie-chart>
+    </div>
+  </div>
+</div>

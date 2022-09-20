@@ -1,0 +1,12 @@
+<div class="content">
+  <div class="container">
+    <h1>NOVO USUÁRIO</h1>
+
+    <input class="input" type="text" [(ngModel)]="name" placeholder="Nome">
+    <input class="input" type="email" [(ngModel)]="email" placeholder="Email">
+    <input class="input" type="password" [(ngModel)]="password" placeholder="Password">
+    
+    <button appHover class="button" (click)="signup()">Cadastrar</button>
+    <a routerLink="/login">Já possuo cadastro</a>
+  </div>
+</div>

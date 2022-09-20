@@ -1,0 +1,13 @@
+<div class="board-row">
+  <app-letter 
+    *ngFor="let letter of boardRow.letters; let index = index"
+    [value]="letter.value"
+    [color]="letter.color"
+    [flipped]="letter.flipped"
+    [animationDisabled]="letter.animationDisabled"
+    [index]="index"
+    [active]="boardRow.activeLetterIndex == index && !boardRow.disabled"
+    [disabled]="boardRow.disabled"
+    (onClickEvent)="selectLetter($event)"
+  ></app-letter>
+</div>

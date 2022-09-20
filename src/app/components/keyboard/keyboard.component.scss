@@ -1,0 +1,38 @@
+.keyboard {
+  >* {
+    margin-bottom: 6px;
+  }
+
+  :last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+
+  >* {
+    margin-right: 6px;
+  }
+
+  :last-child {
+    margin-right: 0px;
+  }
+}
+
+.keyboard-row-first {
+  margin-right: 24px;
+}
+
+.keyboard-row-second {
+  margin-left: 24px;
+}
+
+.keyboard-row-third {
+  margin-left: 48px;
+}
+
+.backspace {
+  margin-left: 20px;
+}

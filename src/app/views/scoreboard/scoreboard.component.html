@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="header">
+    <a routerLink="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21.4 38.3">
+        <path id="back" d="M18.6,42.6,1.05,25.05a1.524,1.524,0,0,1-.35-.5,1.562,1.562,0,0,1,0-1.1,1.524,1.524,0,0,1,.35-.5L18.6,5.4a2.057,2.057,0,0,1,2.8,0,1.992,1.992,0,0,1,0,2.85L5.65,24,21.4,39.75a1.861,1.861,0,0,1,.575,1.425,2.006,2.006,0,0,1-2,1.975A1.866,1.866,0,0,1,18.6,42.6Z" transform="translate(-0.6 -4.85)" fill="#fff"/>
+      </svg>
+    </a>
+    <h1 *ngIf="isDailyScore">PLACAR DO DIA</h1>
+    <h1 *ngIf="!isDailyScore">PLACAR GERAL</h1>
+    <span></span>
+  </div>
+  <div class="content">
+    <table class="scoreboard">
+      <tr>
+        <th></th>
+        <th></th>
+        <th class="table-header">tentativas<br/>até a<br/>vitória</th>
+        <th class="table-header">tempo</th>
+      </tr>
+      <tr [ngClass]="player.currentPlayer ? 'current-player row' : 'row'" *ngFor="let player of players; let index = index">
+        <td class="position">{{index + 1}}.</td>
+        <td class="name">{{player.name}}</td>
+        <td class="tries">{{player.tries}}</td>
+        <td class="time">{{player.time == 0 ? '-' : (player.time) | time}}</td>
+      </tr>
+    </table>
+    <div class="change-board">
+      <p (click)="changeBoard()" *ngIf="!isDailyScore">Placar do dia</p>
+      <p (click)="changeBoard()" *ngIf="isDailyScore">Placar geral</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 21.477">
+        <path id="back" d="M10.693,26.018.852,16.177a.854.854,0,0,1-.2-.28.876.876,0,0,1,0-.617.854.854,0,0,1,.2-.28l9.841-9.841a1.153,1.153,0,0,1,1.57,0,1.117,1.117,0,0,1,0,1.6L3.432,15.588l8.832,8.832a1.044,1.044,0,0,1,.322.8,1.125,1.125,0,0,1-1.121,1.107A1.046,1.046,0,0,1,10.693,26.018Z" transform="translate(12.6 26.327) rotate(180)" fill="#2a9d8f"/>
+      </svg>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .profile {
+    margin-right: 240px;
+  }
+
+  .score {
+    margin-left: 240px;
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .logout {
+    margin-left: 6px;
+    cursor: pointer;
+  }
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  >* {
+    margin-bottom: 6px;
+  }
+
+  :last-child {
+    margin-bottom: 0px;
+  }
+}
+
+::ng-deep .notifier__notification--success {
+  background-color: #2a9d8f;
+}
